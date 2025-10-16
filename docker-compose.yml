@@ -1,0 +1,7 @@
+name: node-rest-service
+
+services:
+  rest-service:
+    build: .
+    ports:
+      - "3000:3000"

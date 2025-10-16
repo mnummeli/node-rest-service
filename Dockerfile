@@ -8,4 +8,5 @@ FROM node:22
 WORKDIR /rest-service
 COPY --from=build /rest-service/dist/ dist/
 COPY --from=build /rest-service/node_modules/ node_modules/
+EXPOSE 3000
 CMD ["node","dist/server.js"]
