@@ -16,7 +16,7 @@ app.get('/greeting', (req: Request, res: Response) => {
 	const searchParams: URLSearchParams = parsedUrl.searchParams;
 	const name: string = searchParams.get('name') || 'World';
 	res.setHeader('Content-Type', 'application/json');
-	res.json({ id: ++id, content: `Hello ${name}!` });
+	res.json({ hostname: os.hostname(), id: ++id, content: `Hello ${name}!` });
 });
 
 app.listen(PORT, () => {
